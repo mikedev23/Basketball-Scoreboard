@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="styles.css">
+        <title>Basketball Scoreboard</title>
+        <link rel="shortcut icon" href="images/bball.ico" type="image/x-icon">
+    </head>
+
+    <body>
+        <div class="main-wrapper">
+            <div class="sub-wrapper">
+                <h3 class="board-title">HOME</h3>
+                <div class="pts-wrapper">
+                    <p class="score" id="homeTeamScoreEl">0</p>
+                </div>
+                <div class="btn-wrapper">
+                    <button class="btn" onclick="addPointsToTeam('home', 1)">+1</button>
+                    <button class="btn" onclick="addPointsToTeam('home', 2)">+2</button>
+                    <button class="btn" onclick="addPointsToTeam('home', 3)">+3</button>
+                </div>
+            </div>
+            <div class="sub-wrapper">
+                <h3 class="board-title">GUEST</h3>
+                <div class="pts-wrapper">
+                    <p class="score" id="awayTeamScoreEl">0</p>
+                </div>
+                <div class="btn-wrapper">
+                    <button class="btn" onclick="addPointsToTeam('away', 1)">+1</button>
+                    <button class="btn" onclick="addPointsToTeam('away', 2)">+2</button>
+                    <button class="btn" onclick="addPointsToTeam('away', 3)">+3</button>
+                </div>
+            </div>
+            <button id="reset-btn" onclick="resetScores()">Reset</button>
+        </div>
+        <audio id="audio1" src="audio/boomshakalaka.mp3"></audio>
+        <audio id="audio2" src="audio/hes-heating-up.mp3"></audio>
+        <audio id="audio3" src="audio/oh-my-hes-on-fire.mp3"></audio>
+        <audio id="audio4" src="audio/game-over.mp3"></audio>
+        <script src="app.js"></script>
+    </body>
+
+</html>
