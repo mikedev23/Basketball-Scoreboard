@@ -4,9 +4,10 @@ let awayTeamScore = 0
 let homeTeamScoreEl = document.getElementById('homeTeamScoreEl')
 let awayTeamScoreEl = document.getElementById('awayTeamScoreEl')
 
-function playSoundEffect (audioId) {
+function playSoundEffect (audioId, volume = 1) {
   const audioElement = document.getElementById(audioId)
   if (audioElement) {
+    audioElement.volume = volume // Volume adjustment (0 to 1)
     audioElement.play()
   }
 }
@@ -27,11 +28,11 @@ function addPointsToTeam (team, points) {
   }
 
   if (points === 1) {
-    playSoundEffect('audio1')
+    playSoundEffect('audio1', 0.1) // Adjust volume level (0.1 means 10% volume)
   } else if (points === 2) {
-    playSoundEffect('audio2')
+    playSoundEffect('audio2', 0.1) // Adjust volume level (0.1 means 10% volume)
   } else if (points === 3) {
-    playSoundEffect('audio3')
+    playSoundEffect('audio3', 0.1) // Adjust volume level (0.1 means 10% volume)
   }
 }
 
@@ -43,7 +44,7 @@ function resetScores () {
   updateFontSize(homeTeamScoreEl)
   updateFontSize(awayTeamScoreEl)
 
-  playSoundEffect('audio4')
+  playSoundEffect('audio4', 0.1) // Adjust volume level (0.1 means 10% volume)
 }
 
 function updateFontSize (scoreEl) {
