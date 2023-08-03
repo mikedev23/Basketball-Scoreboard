@@ -8,7 +8,7 @@ https://mikedev23-basketball-scoreboard.netlify.app/
 
 ## 🌐 Source Code
 
-https://github.com/mikedev23/Organ-Donation
+https://github.com/mikedev23/Basketball-Scoreboard
 
 ## 🔌 Installation
 
